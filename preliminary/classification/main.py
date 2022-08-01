@@ -54,7 +54,7 @@ ecg_model = tf.keras.Sequential([
 ecg_model.compile(loss=tf.keras.losses.SparseCategoricalCrossentropy(),
                   optimizer=tf.keras.optimizers.Adam(),
                   metrics=["accuracy"])
-ecg_model.fit(ecg_features, ecg_labels, epochs = 1, validation_data=(valid_features, valid_labels))
+ecg_model.fit(ecg_features, ecg_labels, epochs = 10, validation_data=(valid_features, valid_labels))
 
 #processing test data (.csv file) by reading and labeling columns
 column_names = []
